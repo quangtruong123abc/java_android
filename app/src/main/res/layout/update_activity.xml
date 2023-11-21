@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UpdateActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/actionbar_back" />
+
+    <TextView
+        android:id="@+id/title_add_hike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/title_update_hike"
+        android:textColor="@color/text_color"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <TextView
+        android:id="@+id/title_name_hike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/name_hike"
+        android:textSize="17sp"
+        android:fontFamily="@font/round_font"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_add_hike" />
+
+    <EditText
+        android:id="@+id/name_hike_detail"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/text_color"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:fontFamily="@font/round_font"
+        android:hint="Name hike"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/title_name_hike" />
+
+    <TextView
+        android:id="@+id/title_location_hike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/location_hike"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_hike_detail" />
+
+    <EditText
+        android:id="@+id/location_hike"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/round_font"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:hint="Location hike"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/title_location_hike" />
+    <TextView
+        android:id="@+id/title_date_hike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/datetime_hike"
+        android:fontFamily="@font/round_font"
+        android:textSize="17sp"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_hike" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        style="?android:spinnerStyle"
+        android:inputType="datetime"
+        android:onClick="openDatePiker"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/round_font"
+        android:layout_marginEnd="30dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:hint="Date and Time..."
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/title_date_hike" />
+
+    <TextView
+        android:id="@+id/parking_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/parking_available"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton">
+
+        <RadioButton
+            android:id="@+id/radio_yes"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/round_font"
+            android:text="Yes"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/radio_no"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/round_font"
+            android:text="No"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/length_hike_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/length_hike"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parking_available" />
+
+    <EditText
+        android:id="@+id/length_hike"
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/input_bg"
+        android:hint="Length hike..."
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/level_hike_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/level_hike"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/length_hike_title" />
+
+    <Spinner
+        android:id="@+id/spinner_level_hike"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/spinner_bg"
+        android:textColor="@color/white"
+        android:hint="Select level hike"
+        android:textColorHint="@color/input_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/length_hike" />
+
+    <TextView
+        android:id="@+id/title_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/round_font"
+        android:text="@string/description_hike"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_level_hike" />
+
+    <EditText
+        android:id="@+id/des_hike"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/round_font"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/title_des" />
+
+    <Button
+        android:id="@+id/update_hike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="Update"
+        android:fontFamily="@font/round_font"
+        android:textColor="@color/white"
+        android:background="@drawable/input_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/des_hike" />
+</androidx.constraintlayout.widget.ConstraintLayout>

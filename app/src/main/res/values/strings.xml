@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">project_mobile</string>
+    <string name="title_add_hike">Add Hike</string>
+    <string name="title_update_hike">Update hike</string>
+    <string name="title_detail_hike">Detail hike</string>
+    <string name="title_add_observation">Add Observation</string>
+    <string name="title_update_observation">Update Observation</string>
+    <string name="name_hike">Name hike</string>
+    <string name="location_hike">Location</string>
+    <string name="datetime_hike">Date hike</string>
+    <string name="parking_available">Parking available</string>
+    <string name="length_hike">Length hike</string>
+    <string name="level_hike">Difficulty level</string>
+    <string name="description_hike">Description</string>
+
+    <!--    spinner-->
+    <string-array name="level_hike">
+        <item>LOW</item>
+        <item>NORMAL</item>
+        <item>HIGH</item>
+        <item>VERY HIGH</item>
+    </string-array>
+</resources>
